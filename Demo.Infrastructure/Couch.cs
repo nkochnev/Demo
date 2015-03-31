@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Demo.Infrastructure
 {
+    /// <summary>
+    /// Сущности - тренеры
+    /// </summary>
     public class Couch
     {
         public int Id { get; set; }

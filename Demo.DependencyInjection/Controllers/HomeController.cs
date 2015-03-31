@@ -12,6 +12,12 @@ namespace Demo.DependencyInjection.Controllers
         private readonly ISender _sender;
         private readonly ILogger _logger;
 
+        /// <summary>
+        /// В конструктор передаются зависимости контроллера
+        /// </summary>
+        /// <param name="teamService"></param>
+        /// <param name="sender"></param>
+        /// <param name="logger"></param>
         public HomeController(ITeamService teamService, ISender sender, ILogger logger)
         {
             _teamService = teamService;
@@ -24,12 +30,18 @@ namespace Demo.DependencyInjection.Controllers
             return RedirectToAction("List");
         }
 
+        /// <summary>
+        /// Список команд
+        /// </summary>
+        /// <returns></returns>
         public ActionResult List()
         {
             var teams = _teamService.GetTeams();
             _logger.Info("Загрузил список команд");
             return View(teams);
         }
+
+        #region Создание команды
 
         public ActionResult CreateTeam()
         {
@@ -43,5 +55,7 @@ namespace Demo.DependencyInjection.Controllers
             _sender.SendEmail("создан пользователь", team.Title, "n.kochnev@erc.ur.ru");
             return RedirectToAction("List");
         }
+
+        #endregion
     }
 }

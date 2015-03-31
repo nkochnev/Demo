@@ -2,6 +2,9 @@
 
 namespace Demo.Infrastructure
 {
+    /// <summary>
+    /// Описание контекста, через который происходит работа с БД
+    /// </summary>
     public interface IDbContext
     {
         /// <summary>

@@ -16,6 +16,9 @@ namespace Demo.CodeFirst
             Console.WriteLine("End");
         }
 
+        /// <summary>
+        /// Работа с контекстом напрямую, без репозитория
+        /// </summary>
         private static void OldSchool()
         {
             Console.WriteLine("OldSchool");
@@ -33,14 +36,18 @@ namespace Demo.CodeFirst
                     }
                 }
 
-                var t = new Team();
-                t.Title = "KrSovetov";
-                t.City = Cities.Ekb;
-                context.Teams.Add(t);
-                context.SaveChanges();
+                ////можно добавлять сущености
+                //var t = new Team();
+                //t.Title = "KrSovetov";
+                //t.City = Cities.Ekb;
+                //context.Teams.Add(t);
+                //context.SaveChanges();
             }
         }
 
+        /// <summary>
+        /// Работа с контекстом через репозиторий
+        /// </summary>
         private static void RepositoryStyle()
         {
             Console.WriteLine("RepositoryStyle");
@@ -59,6 +66,7 @@ namespace Demo.CodeFirst
                     }
                 }
 
+                ////можно добавлять сущности
                 //var dinamo = new Team() {Title = "Dinamo", City = Cities.Moscow};
                 //repository.Insert(dinamo);
             }

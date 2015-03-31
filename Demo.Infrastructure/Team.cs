@@ -2,6 +2,9 @@
 
 namespace Demo.Infrastructure
 {
+    /// <summary>
+    /// Сущность - команда
+    /// </summary>
     public class Team
     {
         public int Id { get; set; }

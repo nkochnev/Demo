@@ -2,6 +2,9 @@
 
 namespace Demo.Infrastructure
 {
+    /// <summary>
+    /// Сущность - Игрок
+    /// </summary>
     public class Player
     {
         [Key]

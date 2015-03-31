@@ -5,6 +5,10 @@ using System.Linq;
 
 namespace Demo.Infrastructure
 {
+    /// <summary>
+    /// Реализация репозитория для Entity Framework
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class EfRepository<T> : IRepository<T> where T : class 
     {
         private readonly IDbContext _context;
