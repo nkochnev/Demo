@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo.JS</title>
+</head>
+<body>
+    <h1>JQuery</h1>
+
+    <ul id="list">
+        <li id="first">Старый элемент списка</li>
+    </ul>
+
+    <button id="btn">Вернуть скрытый элемент списка</button>
+
+    <script src="/js/jquery-1.8.2.min.js"></script>
+    <script>
+        alert();
+        var li = $('<li />').text('Новый элемент списка').css('color', 'red');
+        $('#list').append(li);
+
+        $('#first').hide();
+
+        $('#btn').click(function () {
+            $('#first').show();
+        });
+       
+    </script>
+</body>
+</html>
