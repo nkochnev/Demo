@@ -5,3 +5,4 @@
 - Denendency Injection
 - Unit tests
 - SignalR
+- JS и паттерны Литеральная нотация и Модуль 
